@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💛</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- ===== PAGE 1 ===== -->
+<div class="page active">
+    <img src="assets/poster.jpg">
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 2 ===== -->
+<div class="page">
+    <h2 class="handwriting">Hey Mariyam 👀</h2>
+    <h2 class="message">
+        There’s something waiting for you here ✨<br><br>
+        Don’t worry… nothing too serious.<br><br>
+	Just a few things I wanted you to see 😌<br><br>
+	And no, I’m not going to explain anything beforehand.<br><br>
+	That would ruin the fun.<br><br>
+	NOTE: some suspiciously simple questions are there<br><br>
+ 	(don’t panic… they’re perfectly matched <br><br>
+	for your level of intelligence 🤓)<br><br>
+
+	So yeah… Let’s just begin 🌝
+    </h2>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+
+<!-- ===== PAGE 3 ===== -->
+<div class="page">
+    <video controls>
+        <source src="assets/edit1.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 4: FUN QUESTION ===== -->
+<div class="page">
+    <h2 class="handwriting">General Knowledge Test😄</h2>
+
+    <h3 class="message">
+        Pidayunnorente jeevanil kinavu thannatharu?
+    </h3>
+
+    <button onclick="answer(false,1)">Ammini</button>
+    <button onclick="answer(false,1)">Janmani</button>
+    <button onclick="answer(true,1)">Kanmani</button> <!-- ✅ Correct -->
+    <button onclick="answer(false,1)">Leelamani</button>
+
+    <p id="answerMsg1"></p>
+</div>
+
+<!-- ===== PAGE 5 ===== -->
+<div class="page">
+    <h2 class="handwriting">Since you got the answer right,</h2>
+	<h2>what about a small gift💛</h2>
+
+    <p class="message">
+        But unfortunately, I can’t reach there.<br><br>
+        But I believe it's somewhere there.<br><br>
+        You might need a simple clue to get to it.<br><br>
+        Send <strong>"CLUE"</strong> to <strong>9447922031</strong> on WhatsApp.
+    </p>
+
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 6 CODE ===== -->
+<div class="page">
+    <h3>Hmm..! Looks like you need a code🔐</h3>
+    <p class="message">Sent the Picture of the gift<br><br>
+ you got to "9447922031" on Whatsapp<br><br>
+ to receive your SECRET CODE</p>
+    <input id="code1">
+    <button onclick="checkCode(1)">Submit</button>
+    <p id="error1"></p>
+</div>
+
+<!-- ===== PAGE 7 ===== -->
+<div class="page">
+    <h3 class="message">I have a simple story that<br><br>
+might be very known to you.<br><br>
+Because the characters and the<br><br>
+story may feel real.<br><br>
+It's little long<br><br>
+SIT BACK AND ENJOY🎥</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 8 ===== -->
+<div class="page">
+    <h3>Hey it's a video. Let's play it.</h3>
+    <video controls>
+        <source src="assets/video2.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 9: FUN QUESTION ===== -->
+<div class="page">
+    <h2 class="handwriting">General Knowledge Test😄</h2>
+
+    <h3 class="message">
+        American presidentite perenth?
+    </h3>
+
+    <button onclick="answer(false,2)">Amb</button>
+    <button onclick="answer(true,2)">Trump</button> <!-- ✅ Correct -->
+    <button onclick="answer(false,2)">Kamb</button>
+    <button onclick="answer(false,2)">Chemb</button>
+
+    <p id="answerMsg2"></p>
+</div>
+
+<!-- ===== PAGE 10 ===== -->
+<div class="page">
+    <h3 class="message">Hmmm...! Mariyam,<br><br>
+Something is mysterious here.<br><br>
+I think we need to solve it.<br><br>
+Sent "SOLUTION" to<br><br>
+9447922031 in whatsapp</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 11 CODE ===== -->
+<div class="page">
+    <h3>Hmm..! Looks like you need a code🔐</h3>
+    <p class="message">Sent the Picture of the gift<br><br>
+ you got to "9447922031" on Whatsapp<br><br>
+ to receive your SECRET CODE</p>
+    <input id="code2">
+    <button onclick="checkCode(2)">Submit</button>
+    <p id="error2"></p>
+</div>
+
+<!-- ===== PAGE 12 QUESTION ===== -->
+<div class="page">
+    <h2 class="handwriting">Fun Question</h2>
+    <h3>What might be the reason I chose watch this time?</h3>
+
+    <button onclick="answer(false,3)">Because you’re always late… thought I’d finally fix it</button>
+    <button onclick="answer(true,3)">Because it has some small connection with our past</button>
+    <button onclick="answer(false,3)">So you can count how much time you waste talking nonsense</button>
+
+    <p id="answerMsg3"></p>
+</div>
+
+<!-- ===== PAGE 13 ===== -->
+<div class="page">
+    <h3 class="message">So here is the tail end of our previous story.<br><br>
+Lez Go.....!</h3>
+    <video controls>
+        <source src="assets/storyrem.mp4">
+    </video>
+    <p class="message">Buhahahahahaha</p>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 14 ===== -->
+<div class="page">
+    <h3 class="message">Even wondered how it will <br><br>
+			be, if you met your child version<br><br>
+Let's See</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 15 ===== -->
+<div class="page">
+    <img src="assets/child.jpg">
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 16 ===== -->
+<div class="page">
+    <h3 class="message">You know actually they had a chat too.<br><br>
+	 Hope you don't mind watching it</h3>
+    <video controls>
+        <source src="assets/chat.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 17: FUN QUESTION ===== -->
+<div class="page">
+    <h2 class="handwriting">General Knowledge Test😄</h2>
+
+    <h3 class="message">
+        Gujarathi kalthala kettiya __________ pennan ne?
+    </h3>
+
+    <button onclick="answer(false,4)">Nepali</button>
+    <button onclick="answer(false,4)">Erapali</button> 
+    <button onclick="answer(false,4)">Bengali</button>
+    <button onclick="answer(true,4)">Malayali</button><!-- ✅ Correct -->
+
+    <p id="answerMsg4"></p>
+</div>
+
+<!-- ===== PAGE 18 ===== -->
+<div class="page">
+    <h3 class="message">Mariyam, you are an absolute genius<br><br>
+You really deserve a prize.<br><br>
+Sent "Where is my prize?" to<br><br>
+9447922031 in whatsapp</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 19 CODE ===== -->
+<div class="page">
+    <h3>Hmm.. Code Needed🔐</h3>
+    <p class="message">Sent the Picture of the gift<br><br>
+ you got to "9447922031" on Whatsapp<br><br>
+ to receive your SECRET CODE</p>
+    <input id="code3">
+    <button onclick="checkCode(3)">Submit</button>
+    <p id="error3"></p>
+</div>
+
+<!-- ===== PAGE 20 ===== -->
+<div class="page">
+    <h3>Let's see another edit of yours</h3>
+    <video controls>
+        <source src="assets/edit2.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 21 ===== -->
+<div class="page">
+    <h3 class="message">This video has no story.<br><br>
+
+No logic.<br><br>
+Just us being dumb 😌<br><br>
+
+If you’re expecting something normal…<br><br>
+you’ll be disappointed.<br><br>
+
+Anyway, watch it 🤡
+</h3>
+    <video controls>
+        <source src="assets/moments.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 22 ===== -->
+<div class="page">
+    <img src="assets/letter.jpg">
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 23: FUN QUESTION ===== -->
+<div class="page">
+    <h2 class="handwriting">General Knowledge Test😄</h2>
+
+    <h3 class="message">
+        Thamara kuruvikk _______ idu?
+    </h3>
+
+    <button onclick="answer(false,5)">Nikker</button>
+    <button onclick="answer(false,5)">Shirt</button> 
+    <button onclick="answer(true,5)">Thattam</button><!-- ✅ Correct -->
+    <button onclick="answer(false,5)">Jetty</button>
+
+    <p id="answerMsg5"></p>
+</div>
+
+<!-- ===== PAGE 24 ===== -->
+<div class="page">
+    <video controls>
+        <source src="assets/video1.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 25 ===== -->
+<div class="page">
+    <p class="message">TEXT<br><br>
+TEXT<br><br>
+TEXT<br><br>
+TEXT</p>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 26: FUN QUESTION ===== -->
+<div class="page">
+    <h2 class="handwriting">General Knowledge Test😄</h2>
+
+    <h2 class="message">
+        Njan adicha thangamaate, _________ thungamaate?
+    </h2>
+
+    <button onclick="answer(false,6)">2 aazhcha</button>
+    <button onclick="answer(true,6)">4 masam</button> <!-- ✅ Correct -->
+    <button onclick="answer(false,6)">1 varsham</button>
+    <button onclick="answer(false,6)">10 divasam</button>
+
+    <p id="answerMsg6"></p>
+</div>
+
+<!-- ===== PAGE 27 ===== -->
+<div class="page">
+    <h3 class="message">Again, you are brilliant Mariyam<br><br>
+Now you have to hunt something.<br><br>
+Don't worry<br><br>
+Sent "Help me for the hunt" to<br><br>
+9447922031 in whatsapp</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 28 CODE ===== -->
+<div class="page">
+    <h3>Hmm.. Code Needed Again🔐</h3>
+    <p class="message">Sent the Picture of the Hunted Treasure<br><br>
+ you got to "9447922031" on Whatsapp<br><br>
+ to receive your SECRET CODE</p>
+    <input id="code4">
+    <button onclick="checkCode(3)">Submit</button>
+    <p id="error3"></p>
+</div>
+
+
+<!-- ===== PAGE 29 ===== -->
+<div class="page">
+    <h3 class="handwriting">So Mariyam,</h3>
+ <h3 class="message">Hope you’re the happiest right now…<br><br>
+and yeah, Happy Birthday once again 😌<br><br>
+Love you a lot, hate you a lot,<br><br>
+ miss you a lot… balance is important 🤡<br><br>
+
+Anyway, this whole thing ends with <br><br>
+one last appreciation video<br><br>
+(don’t get too emotional) and… <br><br>
+an anonymous call you’ll be getting soon 👀<br><br>
+
+So stay ready.<br><br>
+
+Once again, be happy… <br><br>
+Happy Birthday 🎂
+
+</h3>
+	
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 30 ===== -->
+<div class="page">
+    <video controls>
+        <source src="assets/end.mp4">
+    </video>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- ===== PAGE 31 ===== -->
+<div class="page">
+    <h2>Bei.. 💛</h2>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

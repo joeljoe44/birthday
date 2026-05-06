@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    font-family: 'Poppins', sans-serif;
+
+    /* 🌸 LIGHT ELEGANT BACKGROUND */
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+
+    color: #222;
+}
+
+/* MAIN APP BACKGROUND (ensures consistency) */
+#app {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+/* PAGE STYLE (GLASS CARD EFFECT) */
+.page {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 25px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* ✨ Elegant glass look */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    pointer-events: none;
+}
+
+/* ACTIVE PAGE */
+.page.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+/* TEXT */
+h1, h2, h3, p {
+    color: #222;
+}
+
+/* BUTTON */
+button {
+    margin-top: 25px;
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: none;
+
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+
+    box-shadow: 0 6px 15px rgba(255, 120, 150, 0.25);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 120, 150, 0.35);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+
+    background: #f1f1f1;
+    color: #222;
+}
+
+/* MEDIA */
+video, img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+
+    transition: transform 0.4s ease;
+}
+
+/* MEDIA ANIMATION */
+.page.active video,
+.page.active img {
+    transform: scale(1.02);
+}
+
+/* CONTENT ANIMATION */
+.page.active > * {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✍️ Handwriting heading */
+.handwriting {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #ff6a88;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 💬 Message text */
+.message {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 90%;
+}
+
+/* ❌ Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}
