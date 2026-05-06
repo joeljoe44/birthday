@@ -18,7 +18,12 @@ function nextPage() {
         pages[currentPage].classList.add("active");
 
         // ✅ RESET SCROLL TO TOP
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        try {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        } catch (error) {
+            window.scrollTo(0, 0);
+        }
+
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
