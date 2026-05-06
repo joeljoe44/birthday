@@ -16,6 +16,7 @@ function nextPage() {
 
     if (currentPage < pages.length) {
         pages[currentPage].classList.add("active");
+        pages[currentPage].scrollTop = 0;
 
         // ✅ RESET SCROLL TO TOP
         try {
