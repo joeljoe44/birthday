@@ -19,6 +19,8 @@ function nextPage() {
 
         // ✅ RESET SCROLL TO TOP
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 }
 
