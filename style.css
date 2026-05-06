@@ -6,7 +6,7 @@ html, body {
     font-family: 'Poppins', sans-serif;
 
     /* 🌸 LIGHT ELEGANT BACKGROUND */
-    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+    background: #fce4ec;
 
     color: #222;
 }
@@ -14,7 +14,6 @@ html, body {
 /* MAIN APP BACKGROUND (ensures consistency) */
 #app {
     min-height: 100vh;
-    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
 }
 
 /* PAGE STYLE */
