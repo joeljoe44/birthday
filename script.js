@@ -31,10 +31,10 @@ function nextPage() {
 }
 
 const codes = {
-    1: "1111",
-    2: "2222",
-    3: "3333",
-    4: "4444"
+    1: "JULIE",
+    2: "IAMAFOOL",
+    3: "080502",
+    4: "EMIKA"
 };
 
 function checkCode(num) {
