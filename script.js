@@ -1,5 +1,46 @@
 let currentPage = 0;
 
+// 🚫 Prevent context menu and download on media elements
+document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('video, img');
+    
+    mediaElements.forEach(element => {
+        // Prevent right-click context menu
+        element.addEventListener('contextmenu', (e) => e.preventDefault());
+        
+        // Prevent long-press on mobile
+        element.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 1) return;
+            
+            const touch = e.touches[0];
+            const startTime = Date.now();
+            const startX = touch.clientX;
+            const startY = touch.clientY;
+            
+            const touchEndHandler = () => {
+                element.removeEventListener('touchmove', touchMoveHandler);
+                element.removeEventListener('touchend', touchEndHandler);
+            };
+            
+            const touchMoveHandler = (moveEvent) => {
+                const moveTouch = moveEvent.touches[0];
+                const distX = Math.abs(moveTouch.clientX - startX);
+                const distY = Math.abs(moveTouch.clientY - startY);
+                
+                if (distX > 10 || distY > 10) {
+                    touchEndHandler();
+                }
+            };
+            
+            element.addEventListener('touchmove', touchMoveHandler, false);
+            element.addEventListener('touchend', touchEndHandler, false);
+        });
+        
+        // Prevent dragging
+        element.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+});
+
 function nextPage() {
     const pages = document.querySelectorAll(".page");
 

@@ -97,6 +97,19 @@ video, img {
     max-width: 100%;
     border-radius: 15px;
     margin-top: 15px;
+    
+    /* Prevent selection and context menu */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    /* Prevent dragging */
+    -webkit-user-drag: none;
+    
+    /* Prevent long-press context menu on mobile */
+    -webkit-touch-callout: none;
+}
 
     transition: transform 0.4s ease;
 }
