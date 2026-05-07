@@ -74,7 +74,7 @@ function nextPage() {
 const codes = {
     1: "JULIE",
     2: "MUMBAI",
-    3: "080502",
+    3: "11223344",
     4: "EMIKA"
 };
 
